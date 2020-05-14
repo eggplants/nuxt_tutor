@@ -1,12 +1,18 @@
 <template>
   <div>
-    <marquee><h1>💩</h1></marquee>
-    <marquee><h1>💩</h1></marquee>
-    <marquee><h1>💩</h1></marquee>
-    <marquee><h1>💩</h1></marquee>
-    <marquee><h1>💩</h1></marquee>
-    <marquee><h1>💩</h1></marquee>
+    <marquee>💩は三</marquee>
+    <marquee>💩じ三</marquee>
+    <marquee>💩め三</marquee>
+    <marquee>💩て三</marquee>
+    <marquee>💩の三</marquee>
+    <marquee>💩js三</marquee>
     <nuxt />
+    <marquee>💩は三</marquee>
+    <marquee>💩じ三</marquee>
+    <marquee>💩め三</marquee>
+    <marquee>💩て三</marquee>
+    <marquee>💩の三</marquee>
+    <marquee>💩js三</marquee>
   </div>
 </template>
 

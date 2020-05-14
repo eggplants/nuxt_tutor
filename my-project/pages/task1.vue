@@ -1,52 +1,80 @@
 <template>
-  <div>
-    <Logo />
-    <h1>TEST★PAGE</h1>
-    <ul>
-      <li v-for="item in todos" :key="item.id">{{ item.label }}</li>
+  <div class="container">
+    <h1>筑波大学厚生会施設一覧表</h1>
+    <!--
+    <div v-for="item in kousei" v-bind:key="item.num">
+      <span>{{ item.id }}</span>
+      <span>{{ item.name }}</span>
+    </div>
+    -->
+    <ul v-for="place in places" v-bind:key="place">
+      <li>
+        {{place}}
+        <ul v-for="i in kousei" v-bind:key="i.name">
+          <li v-if="i.place==place">
+            <details>
+              <summary>{{i.name}}</summary>
+              <ul>
+                <li>平日：{{i.time_weekday}}</li>
+                <li>土曜：{{i.time_sat}}</li>
+                <li>日祝：{{i.time_off}}</li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </li>
     </ul>
     <details>
       <summary>
         ソースは
-        <a v-bind:href="source">ここ</a>
+        <a v-bind:href="sourceUrl1">ここ</a>と
+        <a v-bind:href="sourceUrl2">ここ</a>
       </summary>
-      <script
-        src="https://gist.githubusercontent.com/eggplants/5daec400f9fef486ac18ea0efecb9071/raw/130e23543377200e412bf2ab6361bf91ba95ee91/kousei_fixed.json"
-      ></script>
+      <pre>
+        <code class="language-js">
+          {{kousei}}
+        </code>
+      </pre>
     </details>
   </div>
 </template>
 
 <script>
+import kousei from "@/assets/json/kousei_fixed.json";
+
 export default {
-  props: {
-    num: {
-      type: Number,
-      required: true
-    }
-  },
+  props: {},
   components: {},
-  source() {
-    return "https://gist.github.com/eggplants/5daec400f9fef486ac18ea0efecb9071";
-  },
-  methods: {
-    createdJSON() {
-      fetch(
-        "https://gist.githubusercontent.com/eggplants/5daec400f9fef486ac18ea0efecb9071/raw/130e23543377200e412bf2ab6361bf91ba95ee91/kousei_fixed.json"
-      )
-        .then(res => {
-          if (res.ok) {
-            return res.json();
-          }
-        })
-        .then(res => {
-          console.log(res);
-        })
-        .catch(err => {});
-    }
+  data() {
+    return {
+      sourceUrl1: "http://www.tsukuba-koseikai.com/",
+      sourceUrl2:
+        "https://gist.github.com/eggplants/5daec400f9fef486ac18ea0efecb9071",
+      kousei: kousei,
+      fields: [
+        { key: "num" },
+        { key: "place" },
+        { key: "name" },
+        { key: "time(月~金)" },
+        { key: "time(土)" },
+        { key: "time(日・祝)" }
+      ],
+      places: Array.from(new Set(kousei.map(obj => obj.place))),
+      place_each: Array.from(new Set(kousei.map(obj => obj.place)))
+    };
   }
 };
 </script>
 
 <style scoped>
+table {
+  border-collapse: collapse;
+  border: 1px solid #666;
+}
+
+td,
+th {
+  border: 1px solid #666;
+  padding: 0.3em 0.5em; /* 文字周りのスペース（パディング） */
+}
 </style>

@@ -1,0 +1,418 @@
+[
+  {
+    "num": 0,
+    "place": "一の矢宿舎共用棟",
+    "name": "食品・日用雑貨",
+    "time_weekday": "8:00~22:00",
+    "time_sat": "8:00~22:00",
+    "time_off": "8:00~22:00"
+  },
+  {
+    "num": 1,
+    "place": "一の矢宿舎共用棟",
+    "name": "電化製品",
+    "time_weekday": "10:00~18:00",
+    "time_sat": "10:00~17:00",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "一の矢宿舎共用棟",
+    "name": "理容",
+    "time_weekday": "10:00~17:00",
+    "time_sat": "10:00~13:00",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "一の矢宿舎共用棟",
+    "name": "コインシャワー",
+    "time_weekday": "00:00~24:00",
+    "time_sat": "00:00~24:00",
+    "time_off": "00:00~24:00"
+  },
+  {
+    "num": 0,
+    "place": "春日福利厚生棟",
+    "name": "食堂",
+    "time_weekday": "10:30~14:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "春日福利厚生棟",
+    "name": "書籍・文具",
+    "time_weekday": "10:00~17:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 0,
+    "place": "2B棟",
+    "name": "食堂",
+    "time_weekday": "8:20~18:40",
+    "time_sat": "10:00~13:30",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "2B棟",
+    "name": "小食堂",
+    "time_weekday": "11:00~13:30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "2B棟",
+    "name": "喫茶(ハラール)",
+    "time_weekday": "11:00~15:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "2B棟",
+    "name": "パン販売",
+    "time_weekday": "9:55~14:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 4,
+    "place": "2B棟",
+    "name": "書籍・文具",
+    "time_weekday": "10:00~17:30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 0,
+    "place": "3A棟",
+    "name": "食堂",
+    "time_weekday": "9:30~17:00",
+    "time_sat": "11:00~14:00",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "3A棟",
+    "name": "小食堂(うどん・そば)",
+    "time_weekday": "10:30~19:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "3A棟",
+    "name": "小食堂(カレー)",
+    "time_weekday": "10:00~18:30",
+    "time_sat": "10:00～14:00",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "3A棟",
+    "name": "小食堂(中華)",
+    "time_weekday": "10:30~19:00",
+    "time_sat": "11:00~14:00",
+    "time_off": "-"
+  },
+  {
+    "num": 4,
+    "place": "3A棟",
+    "name": "小食堂(ハラルフード)",
+    "time_weekday": "11:00~19:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 5,
+    "place": "3A棟",
+    "name": "喫茶",
+    "time_weekday": "8:15~18:30",
+    "time_sat": "8:15~14:00",
+    "time_off": "-"
+  },
+  {
+    "num": 6,
+    "place": "3A棟",
+    "name": "書籍・文具",
+    "time_weekday": "10:00~17:30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 7,
+    "place": "3A棟",
+    "name": "食品・日用雑貨",
+    "time_weekday": "8:00~19:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 8,
+    "place": "3A棟",
+    "name": "パン販売",
+    "time_weekday": "11:00~15:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 9,
+    "place": "総合研究棟B",
+    "name": "パン販売",
+    "time_weekday": "11:00~13:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 10,
+    "place": "総合研究棟B",
+    "name": "弁当販売",
+    "time_weekday": "11:00~13:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 0,
+    "place": "本部棟",
+    "name": "食堂",
+    "time_weekday": "11:00~14:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "本部棟",
+    "name": "パン販売",
+    "time_weekday": "11:00~13:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 0,
+    "place": "1A棟",
+    "name": "食堂",
+    "time_weekday": "11:00~14:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "1A棟",
+    "name": "喫茶",
+    "time_weekday": "11:00~18:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "1A棟",
+    "name": "書籍・文具",
+    "time_weekday": "10:00~17:30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "1A棟",
+    "name": "パン販売(１D棟で営業)",
+    "time_weekday": "11:00~15:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 4,
+    "place": "中央図書館",
+    "name": "コーヒーショップ",
+    "time_weekday": "8:00~20:00",
+    "time_sat": "10:00~18:00",
+    "time_off": "10:00~18:00"
+  },
+  {
+    "num": 0,
+    "place": "本館",
+    "name": "レストラン",
+    "time_weekday": "11:00~13：30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "大学会館別館",
+    "name": "書籍・文具",
+    "time_weekday": "9:50~18:30",
+    "time_sat": "9:50~17:30",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "大学会館別館",
+    "name": "食品・日用雑貨",
+    "time_weekday": "9:50~18:30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "大学会館別館",
+    "name": "画材等",
+    "time_weekday": "9:30~18:30",
+    "time_sat": "11:00~17:00",
+    "time_off": "-"
+  },
+  {
+    "num": 0,
+    "place": "体育・芸術福利厚生棟",
+    "name": "食堂・コンビニ(営業中)",
+    "time_weekday": "8:15~17:30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "体育・芸術福利厚生棟",
+    "name": "喫茶(２階)(休業中)",
+    "time_weekday": "9:55~14:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "体育・芸術福利厚生棟",
+    "name": "画材・文具(休業中)",
+    "time_weekday": "10:00~19:00",
+    "time_sat": "12:00~17:00",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "体育・芸術福利厚生棟",
+    "name": "喫茶(３階)(休業中)",
+    "time_weekday": "11:00~14:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 4,
+    "place": "体育・芸術福利厚生棟",
+    "name": "写真・スポーツ用品(休業中)",
+    "time_weekday": "8:00~16:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 5,
+    "place": "5C棟",
+    "name": "パン販売(体)",
+    "time_weekday": "11:00~15:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 6,
+    "place": "5C棟",
+    "name": "パン販売(芸)",
+    "time_weekday": "11:00~14:30",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 7,
+    "place": "総合研究棟D",
+    "name": "パン販売",
+    "time_weekday": "11:00~13:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 0,
+    "place": "平砂宿舎共用棟",
+    "name": "食堂",
+    "time_weekday": "11:00~14:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "平砂宿舎共用棟",
+    "name": "電化製品",
+    "time_weekday": "10:00~18:00",
+    "time_sat": "10:00~17:00",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "平砂宿舎共用棟",
+    "name": "理容",
+    "time_weekday": "9:00~17:00",
+    "time_sat": "9:00~13:00",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "平砂宿舎共用棟",
+    "name": "浴場",
+    "time_weekday": "18:00~23:00",
+    "time_sat": "18:00~22:00",
+    "time_off": "18:00~22:00"
+  },
+  {
+    "num": 0,
+    "place": "追越宿舎共用棟",
+    "name": "電化製品",
+    "time_weekday": "10:00~18:00",
+    "time_sat": "10:00~17:00",
+    "time_off": "-"
+  },
+  {
+    "num": 0,
+    "place": "医学福利厚生棟",
+    "name": "食堂",
+    "time_weekday": "11:00~15:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 1,
+    "place": "医学福利厚生棟",
+    "name": "喫茶",
+    "time_weekday": "11:00~17:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 2,
+    "place": "医学福利厚生棟",
+    "name": "書籍・文具",
+    "time_weekday": "10:00~17:30",
+    "time_sat": "10:00~17:00",
+    "time_off": "-"
+  },
+  {
+    "num": 3,
+    "place": "医学福利厚生棟",
+    "name": "食品・日用雑貨",
+    "time_weekday": "8:00~19:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 4,
+    "place": "医学福利厚生棟",
+    "name": "パン販売",
+    "time_weekday": "11:00~17:00",
+    "time_sat": "-",
+    "time_off": "-"
+  },
+  {
+    "num": 5,
+    "place": "4B棟",
+    "name": "パン販売",
+    "time_weekday": "11:00~13:00",
+    "time_sat": "-",
+    "time_off": "-"
+  }
+]
