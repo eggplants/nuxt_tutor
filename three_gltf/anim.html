@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas-wrapper">
+      <canvas id="myCanvas"></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r109/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="module" src="./js/OrbitControls.js"></script>
+    <script>
+      window.addEventListener("load", init);
+
+      let myObject = null;
+      let scene;
+      let mixer;
+      let clock = new THREE.Clock();
+
+      function init() {
+        // サイズを指定
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        // レンダラーを作成
+        const renderer = new THREE.WebGLRenderer({
+          canvas: document.querySelector("#myCanvas"),
+        });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
+
+        // シーンを作成
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x000000);
+
+        //光源1
+        const light1 = new THREE.DirectionalLight(0xffffff, 1);
+        light1.position.set(100, -100, 80);
+        scene.add(light1);
+        var helper1 = new THREE.DirectionalLightHelper(light1, 10);
+        scene.add(helper1);
+        //光源2
+        const light2 = new THREE.DirectionalLight(0xffffff, 1);
+        light1.position.set(-50, 100, 80);
+        scene.add(light2);
+        var helper2 = new THREE.DirectionalLightHelper(light1, 10);
+        scene.add(helper2);
+
+        // カメラを作成
+        const camera = new THREE.PerspectiveCamera(45, width / height);
+        camera.position.set(0, 0, +500);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.2;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.35;
+
+        var axes = new THREE.AxisHelper(500);
+        scene.add(axes);
+
+        var loader = new THREE.GLTFLoader();
+        loader.load(
+          //3Dオブジェクトのローディング
+          "models/fox/Fox.gltf",
+          function (gltf) {
+            myObject = gltf.scene;
+            //myObject.scale.set(100, 100, 100);
+            scene.add(myObject);
+            console.log(gltf);
+
+            const animations = gltf.animations;
+
+            if (animations && animations.length) {
+              mixer = new THREE.AnimationMixer(myObject);
+
+              //全てのAnimation Clipに対して
+              for (let i = 0; i < animations.length; i++) {
+                let animation = animations[i];
+
+                //Animation Actionを生成
+                let action = mixer.clipAction(animation);
+
+                //ループ設定（1回のみ）
+                //action.setLoop(THREE.LoopOnce);
+
+                //アニメーションの最後のフレームでアニメーションが終了
+                //action.clampWhenFinished = true;
+
+                //アニメーションを再生
+                action.play();
+              }
+            }
+
+            tick();
+          },
+          undefined,
+          function (error) {
+            console.error(error);
+          }
+        );
+
+        function tick() {
+          //myObject.rotation.y += 0.005;
+          if (mixer) {
+            mixer.update(clock.getDelta());
+          }
+          renderer.render(scene, camera);
+          requestAnimationFrame(tick);
+        }
+      }
+
+      //くるくる
+      // const mouse = { x: 0, y: 0, active: false };
+      // window.onmousedown = (e) => {
+      //   mouse.active = true;
+      //   mouse.x = e.clientX;
+      //   mouse.y = e.clientY;
+      // };
+      // window.onmouseup = (e) => {
+      //   mouse.active = false;
+      // };
+      // window.onmousemove = (e) => {
+      //   if (mouse.active) {
+      //     var deltaX = e.clientX - mouse.x,
+      //       deltaY = e.clientY - mouse.y;
+      //     mouse.x = e.clientX;
+      //     mouse.y = e.clientY;
+      //     myObject.rotation.y += deltaX / 100;
+      //     myObject.rotation.x += deltaY / 100;
+      //   }
+      // };
+    </script>
+  </body>
+</html>

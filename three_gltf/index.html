@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas-wrapper">
+      <canvas id="myCanvas"></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <!--バージョン注意-->
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r109/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="module" src="./js/OrbitControls.js"></script>
+    <script>
+      window.addEventListener("load", init);
+
+      let myObject = null;
+      let scene;
+
+      function init() {
+        // サイズを指定
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        // レンダラーを作成
+        const renderer = new THREE.WebGLRenderer({
+          canvas: document.querySelector("#myCanvas"),
+        });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
+
+        // シーンを作成
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x000000);
+
+        //光源1(白四角)
+        const light1 = new THREE.DirectionalLight(0xffffff, 1);
+        light1.position.set(100, -100, 80);
+        scene.add(light1);
+
+        //光源位置の可視化
+        var helper1 = new THREE.DirectionalLightHelper(light1, 10);
+        scene.add(helper1);
+
+        // カメラを作成
+        const camera = new THREE.PerspectiveCamera(45, width / height);
+        camera.position.set(0, 0, +500);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.2;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.35;
+
+        //三平方座標軸の可視化
+        var axes = new THREE.AxisHelper(500);
+        scene.add(axes);
+
+        var loader = new THREE.GLTFLoader();
+        loader.load(
+          "./models/fox/Fox.gltf",
+          function (gltf) {
+            myObject = gltf.scene;
+            console.log(gltf);
+            //myObject.scale.set(100, 100, 100);
+            scene.add(myObject);
+            tick();
+          },
+          undefined,
+          function (error) {
+            console.error(error);
+          }
+        );
+
+        //レンダリング
+        function tick() {
+          //myObject.rotation.y += 0.005;
+          renderer.render(scene, camera);
+          requestAnimationFrame(tick);
+        }
+      }
+
+      /* const mouse = { x: 0, y: 0, active: false };
+      window.onmousedown = (e) => {
+        mouse.active = true;
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      };
+      window.onmouseup = (e) => {
+        mouse.active = false;
+      };
+      window.onmousemove = (e) => {
+        if (mouse.active) {
+          var deltaX = e.clientX - mouse.x,
+            deltaY = e.clientY - mouse.y;
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+          myObject.rotation.y += deltaX / 100;
+          myObject.rotation.x += deltaY / 100;
+        }
+      }; */
+    </script>
+  </body>
+</html>
