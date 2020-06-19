@@ -1,7 +1,7 @@
 <template>
   <div class="books">
     <header>
-    <h1>本の検索 in Google Books API</h1>
+      <h1>本の検索 in Google Books API</h1>
       Keyword:
       <input type="text" class="form-control" v-model="key" />
       <button @click="getBooks">検索</button>
@@ -64,23 +64,23 @@ $text-color: #333;
   margin: auto;
   color: $text-color;
   .book {
-      display: flex;
+    display: flex;
     .thumb {
-        margin-right: 10px;
+      margin-right: 10px;
     }
     .content {
-        .title{
-            fomd-size: 140%;
-        }
-        .sub-title {
-            color: #888;
-            margin-bottom: 20px;
-        }
-        .description {
-            font-size: 80%;
-            height: 4em;
-            overflow: hidden;
-        }
+      .title {
+        font-size: 140%;
+      }
+      .sub-title {
+        color: #888;
+        margin-bottom: 20px;
+      }
+      .description {
+        font-size: 80%;
+        height: 4em;
+        overflow: hidden;
+      }
     }
   }
 }
